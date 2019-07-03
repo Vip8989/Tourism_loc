@@ -75,8 +75,13 @@ Route::group(['as' => 'admin.','prefix' => 'admin','middleware'=> 'auth'],functi
    
     //для редактирования материалов блога
     Route::resource('/articles','Admin\ArticlesController');
+
+    //маршрут для пункта меню привилегии
+    Route::resource('/permissions','Admin\PermissionsController');
    
 });
+
+
 
 
 //Auth::routes();

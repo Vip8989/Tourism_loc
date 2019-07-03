@@ -7,7 +7,9 @@ use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
 use Tour\Article;
+use Tour\Permission;
 use Tour\Policies\ArticlePolicy;
+use Tour\Policies\PermissionPolicy;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -19,7 +21,8 @@ class AuthServiceProvider extends ServiceProvider
     protected $policies = [
 
         //регистрация политики безопасности для модели article
-        Article::class => ArticlePolicy::class
+        Article::class => ArticlePolicy::class,
+        Permission::class => PermissionPolicy::class
     ];
 
     /**
@@ -41,8 +44,8 @@ class AuthServiceProvider extends ServiceProvider
         	return $user->canDo('VIEW_ADMIN_ARTICLES', FALSE);
         });
 
-        $gate->define('VIEW_ADMIN_ARTICLES', function ($user) {
-        	return $user->canDo('VIEW_ADMIN_ARTICLES', FALSE);
+        $gate->define('EDIT_USERS', function ($user) {
+        	return $user->canDo('EDIT_USERS', FALSE);
         });
     }
 }
