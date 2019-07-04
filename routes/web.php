@@ -78,6 +78,8 @@ Route::group(['as' => 'admin.','prefix' => 'admin','middleware'=> 'auth'],functi
 
     //маршрут для пункта меню привилегии
     Route::resource('/permissions','Admin\PermissionsController');
+    //маршрут для пунктов главного меню
+    Route::resource('/menus','Admin\MenusController');
    
 });
 
