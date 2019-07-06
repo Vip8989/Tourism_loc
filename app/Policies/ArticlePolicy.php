@@ -3,6 +3,7 @@
 namespace Tour\Policies;
 
 use Tour\User;
+use Tour\Article;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class ArticlePolicy
