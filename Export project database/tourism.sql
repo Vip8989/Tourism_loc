@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Июл 06 2019 г., 16:25
+-- Время создания: Июл 08 2019 г., 23:09
 -- Версия сервера: 5.7.23
 -- Версия PHP: 7.1.22
 
@@ -240,7 +240,8 @@ INSERT INTO `permissions` (`id`, `name`, `created_at`, `updated_at`) VALUES
 (5, 'ADMIN_USERS', NULL, NULL),
 (6, 'VIEW_ADMIN_ARTICLES', NULL, NULL),
 (7, 'EDIT_USERS', NULL, NULL),
-(8, 'VIEW_ADMIN_MENU', NULL, NULL);
+(8, 'VIEW_ADMIN_MENU', NULL, NULL),
+(9, 'EDIT_MENU', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -266,9 +267,10 @@ INSERT INTO `permission_role` (`id`, `created_at`, `updated_at`, `role_id`, `per
 (3, NULL, NULL, 1, 3),
 (4, NULL, NULL, 1, 4),
 (5, NULL, NULL, 1, 5),
-(6, NULL, NULL, 1, 6),
 (7, NULL, NULL, 1, 7),
-(9, NULL, NULL, 1, 8);
+(10, NULL, NULL, 1, 9),
+(11, NULL, NULL, 1, 6),
+(12, NULL, NULL, 1, 8);
 
 -- --------------------------------------------------------
 
@@ -343,7 +345,8 @@ CREATE TABLE `role_user` (
 --
 
 INSERT INTO `role_user` (`id`, `created_at`, `updated_at`, `user_id`, `role_id`) VALUES
-(1, NULL, NULL, 1, 1);
+(1, NULL, NULL, 1, 1),
+(2, NULL, NULL, 3, 3);
 
 -- --------------------------------------------------------
 
@@ -392,7 +395,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`, `login`) VALUES
 (1, 'Admin', 'admin@mail.ru', '$2y$10$vn7xrQksZ0/1rTgBD4Vey.4A9a/66mvBpDPqKKvlQqy7VIq.gXGES', NULL, '2019-06-01 19:46:05', '2019-06-01 19:46:05', 'admin'),
-(2, 'Tatsiana', 'Tat@mail.ru', '$2y$10$N1E8.gEitiEEsIS0I6lQxOVDilBn.hRwJ9yudTh9lbyMHpkM877vS', 'QiBRm88gQ93VuJ6lKTZpvR7Qjusa8cD8GL99e83fuZujdzquQt33h3UGGKgm', '2019-06-22 18:36:35', '2019-06-22 18:36:35', 'tatsiana');
+(3, 'Igor5', 'igor5@mail.ru', '$2y$10$pzzpkynRXlwQJk2D67eRvOqxzAHZp2/tZN/3R/K34JCsB.NnUqEPW', NULL, '2019-07-08 14:20:29', '2019-07-08 16:25:08', 'igor5');
 
 --
 -- Индексы сохранённых таблиц
@@ -504,7 +507,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT для таблицы `categories`
@@ -516,7 +519,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT для таблицы `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT для таблицы `filters`
@@ -540,13 +543,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT для таблицы `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT для таблицы `permission_role`
 --
 ALTER TABLE `permission_role`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT для таблицы `portfolios`
@@ -564,7 +567,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT для таблицы `role_user`
 --
 ALTER TABLE `role_user`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT для таблицы `sliders`
@@ -576,7 +579,7 @@ ALTER TABLE `sliders`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц

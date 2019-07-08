@@ -10,6 +10,8 @@ use Tour\Article;
 use Tour\Permission;
 use Tour\Policies\ArticlePolicy;
 use Tour\Policies\PermissionPolicy;
+use Tour\Policies\MenusPolicy;
+use Tour\Menu;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -22,7 +24,8 @@ class AuthServiceProvider extends ServiceProvider
 
         //регистрация политики безопасности для модели article
         Article::class => ArticlePolicy::class,
-        Permission::class => PermissionPolicy::class
+        Permission::class => PermissionPolicy::class,
+        Menu::class => MenusPolicy::class
     ];
 
     /**

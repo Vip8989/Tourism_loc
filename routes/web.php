@@ -80,6 +80,9 @@ Route::group(['as' => 'admin.','prefix' => 'admin','middleware'=> 'auth'],functi
     Route::resource('/permissions','Admin\PermissionsController');
     //маршрут для пунктов главного меню
     Route::resource('/menus','Admin\MenusController');
+
+    //маршрут для пункта пользователи 
+    Route::resource('/users','Admin\UsersController');
    
 });
 

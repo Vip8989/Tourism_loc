@@ -2,6 +2,8 @@
 
 
 return [
+
+
       //путь где будут находится изображения для слайдера
        'slider_path'=>'slider-cycle',
        'home_port_count'=>5,

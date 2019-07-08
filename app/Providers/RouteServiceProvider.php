@@ -32,6 +32,17 @@ class RouteServiceProvider extends ServiceProvider
         	return \Tour\Article::where('alias',$value)->first();
         });
 
+        //привязка для редактирования меню в админке
+        Route::bind('menus', function ($value) {
+        	return \Tour\Menu::where('id',$value)->first();
+        });
+
+        //привязка для редактирования пользователей в админке
+        Route::bind('users', function ($value) {
+		    return \Tour\User::find($value);
+		});
+   
+
       
     }
 
