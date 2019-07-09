@@ -165,9 +165,17 @@ class ArticlesController extends AdminController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    //редактирование материала
     public function update(ArticleRequest $request, Article $article)
     {
         //
+        $result = $this->a_rep->updateArticle($request, $article);
+		
+		if(is_array($result) && !empty($result['error'])) {
+			return back()->with($result);
+		}
+		
+		return redirect('/admin')->with($result);
     }
 
     /**

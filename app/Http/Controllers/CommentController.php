@@ -4,6 +4,8 @@ namespace Tour\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Tour\Http\Requests;
+
 use Validator;
 
 use Auth;
@@ -42,7 +44,7 @@ class CommentController extends SiteController
      */
     public function store(Request $request)
     {
-
+       //информация, которую пользователь добавил в поля формы
         $data = $request->except('_token','comment_post_ID','comment_parent');
         
         $data['article_id'] = $request->input('comment_post_ID');

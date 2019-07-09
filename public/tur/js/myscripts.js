@@ -26,11 +26,9 @@ jQuery(document).ready(function($) {
                 headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
                 type: 'POST',
                 datatype: 'JSON',
-
-                //сохранение коммента
                 success: function(html) {
                     if (html.error) {
-                        $('.wrap_result').css('color', 'red').append('<br /><strong>Ошибка: </strong>' + html.error.join('<br />'));
+                        $('.wrap_result').css('color', 'red').append('<br /><strond>Ошибка: </strong>' + html.error.join('<br />'));
                         $('.wrap_result').delay(2000).fadeOut(500);
                     } else if (html.success) {
                         $('.wrap_result')
@@ -40,10 +38,7 @@ jQuery(document).ready(function($) {
 
                                 if (html.data.parent_id > 0) {
                                     comParent.parents('div#respond').prev().after('<ul class="children">' + html.comment + '</ul>');
-                                }
-
-                                //добавление нового коммента, внизу страницы
-                                else {
+                                } else {
                                     if ($.contains('#comments', 'ol.commentlist')) {
                                         $('ol.commentlist').append(html.comment);
                                     } else {
@@ -55,16 +50,16 @@ jQuery(document).ready(function($) {
 
 
 
-                                //закрытие окна добавления коммента
+
                                 $('#cancel-comment-reply-link').click();
-                            })
+                            });
 
                     }
 
 
                 },
                 error: function() {
-                    $('.wrap_result').css('color', 'red').append('<br /><strong> Ошибка! </strong>');
+                    $('.wrap_result').css('color', 'red').append('<br /><strond>Ошибка: </strong>');
                     $('.wrap_result').delay(2000).fadeOut(500, function() {
                         $('#cancel-comment-reply-link').click();
                     });

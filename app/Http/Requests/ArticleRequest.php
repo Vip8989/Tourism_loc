@@ -22,14 +22,24 @@ class ArticleRequest extends FormRequest
     //если пользователь указал alias
     protected function getValidatorInstance()
     {
-       $validator = parent::getValidatorInstance();
-       
-       $validator->sometimes('alias','unique:articles|max:255', function($input) {
-           
-           return !empty($input->alias);
-           
-       });
-       return $validator;  
+        $validator = parent::getValidatorInstance();
+    	
+    	
+    	
+    	$validator->sometimes('alias','unique:articles|max:255', function($input) {
+        	
+        	
+        	if($this->route()->hasParameter('articles')) {
+				$model = $this->route()->parameter('articles');
+				
+				return ($model->alias !== $input->alias)  && !empty($input->alias);
+			}
+        	
+        	return !empty($input->alias);
+        	
+        });
+        
+        return $validator;
    }	
 
     /**

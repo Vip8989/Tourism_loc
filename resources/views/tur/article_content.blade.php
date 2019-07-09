@@ -34,7 +34,7 @@
         <script type="text/javascript" src="{{ asset (env('THEME')) }}/js/shortcodes.js"></script>
 		<script type="text/javascript" src="{{ asset (env('THEME')) }}/js/jquery.colorbox-min.js"></script> <!-- nav -->
 		<script type="text/javascript" src="{{ asset (env('THEME')) }}/js/jquery.tweetable.js"></script>
-				<script type="text/javascript" src="{{ asset (env('THEME')) }}/js/myscripts.js"></script>
+			<!--	<script type="text/javascript" src="{{ asset (env('THEME')) }}/js/myscripts.js"></script>-->
 				
 
 				<script type="text/javascript" src="{{ asset (env('THEME')) }}/js/jquery.custom.js"></script>
@@ -68,7 +68,8 @@
  <!-- START COMMENTS -->
                    <div id="comments">
 				                <h3 id="comments-title">
-				                    <span>{{ count($article->comments) }}</span> {{ Lang::choice('ru.comments',count($article->comments)) }}    
+				                    <span>{{ count($article->comments) }}</span> 
+														{{ Lang::choice('ru.comments',count($article->comments)) }}    
 				                </h3>
 
 				                @if(count($article->comments) > 0) 

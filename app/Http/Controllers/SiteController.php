@@ -95,10 +95,12 @@ class SiteController extends Controller
        $mBuilder = Menu::make('MyNav', function($m) use ($menu){
           
         foreach($menu as $item){
-
+            //если 0, то это родительский пункт меню
             if($item->parent == 0){
+                //добавляем новый пункт в меню
                 $m->add($item->title,$item->path)->id($item->id);
             }
+            //дочерние пункты меню
             else{
                 if ($m->find($item->parent)){
                     $m->find($item->parent)->add($item->title,$item->path)->id($item->id);
