@@ -15,8 +15,9 @@ class AppServiceProvider extends ServiceProvider
      * @return void
      */
     public function boot()
-    {
-        //для присваивания значений различным переменным -set/ function-определяет функционал данной директивы
+    { 
+        //собственная директива для фасада Blade
+        // собственная директива для присваивания значений различным переменным -set/ function-определяет функционал данной директивы
         Blade::directive('set', function($exp){
 
             list($name,$val)= explode(',', $exp);

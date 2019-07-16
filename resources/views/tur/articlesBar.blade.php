@@ -72,7 +72,7 @@
 
 						<div class="cmnt-icon-right">
 						
-							<p>MARCH 1, 2015</p>
+							<p></p>
 							
 							<p><a href="#">{{ isset($comment->user) ? $comment->user->name : $comment->name}}</a></p>
 						</div>

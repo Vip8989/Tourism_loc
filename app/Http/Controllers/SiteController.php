@@ -91,7 +91,7 @@ class SiteController extends Controller
         //получаем коллекцию моделей из бд
         $menu=$this->m_rep->get();
 
-        //из данной коллекции получаем конкретное меню
+        //из данной коллекции получаем конкретное меню, метод make от расширения laravel - menu
        $mBuilder = Menu::make('MyNav', function($m) use ($menu){
           
         foreach($menu as $item){

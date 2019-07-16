@@ -5,7 +5,7 @@
 <div id="slider-cycle" class="slider cycle no-responsive slider_cycle group" style="height:485px;">
 				    <ul class="slider">
 				    
-				    
+				    <!--  директива set создана в  AppServiceProvider  -->
 				    @set($i,1)
 				    @foreach($sliders as $slider)
 				    
@@ -38,19 +38,22 @@
 				        <div class="yit-widget-content inner group">
 				            <div class="widget-first yit-widget widget col1_4 one-fourth col widget-icon-text group">
 				                <img class="icon-img" src="images/icons/cloud.jpg" alt="" />		
-				                <h3>Great Design</h3>
-				                <p>A widgetized area: add shorcodes, text, icons and more.</p>
+				                <h3>Акция</h3>
+				                <p>Мы рады предложить самые популярные направления и максимально выгодные условия. 
+                             До 31.12.2019 вы можете подобрать идеальный вариант отдыха со скидкой до 50%.</p>
 				            </div>
 				            <div class="yit-widget widget col1_4 one-fourth col widget-last-post group">
 				                <img class="icon-img" src="images/icons/blog1.png" alt="" />        
 				                <div>
-				                    <h3><a class="text-color" href="#" title="">Blog news</a></h3>
-				                    <p>Section shortcodes &amp; sticky posts! <a href="article.html"> | more ></a></p>
+				                    <h3><a class="text-color" href="#" title="">Наши партнеры</a></h3>
+				                    <p>Tez Tour &amp; Pegas &amp; Coral Travel &amp; Anex Tour &amp; TPG  
+														&amp; Join Up &amp; TUI &amp; Библио Глобус &amp; Mouzenidis Travel 
+														<a href="https://trutop.ru/turoperatory-rossii-rejting-luchshih/" target="_blank"> | more ></a></p>
 				                </div>
 				            </div>
 				            <div class="widget-last yit-widget widget col1_4 one-fourth col yit_text_quote">
-				                <blockquote class="text-quote-quote">Anyone who has never made a mistake has never tried anything new.</blockquote>
-				                <cite class="text-quote-author">Albert Einstein</cite>
+				                <blockquote class="text-quote-quote">Путь длиной в тысячи миль начинается с одного клика!</blockquote>
+				                <cite class="text-quote-author">Across Borders</cite>
 				            </div>
 				        </div>
 				    </div>

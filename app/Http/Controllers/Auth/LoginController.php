@@ -53,7 +53,7 @@ class LoginController extends Controller
      {        
         Auth::logout();
         return redirect('/');
-       // return redirect (view (env('THEME').'.login'));
+       //return redirect (view (env('THEME').'.login'));
 
      }
 

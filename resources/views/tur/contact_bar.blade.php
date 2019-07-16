@@ -1,5 +1,5 @@
 <div class="widget-first widget contact-info">
-				                <h3>Contacts</h3>
+				                <h3>Контакты</h3>
 				                <div class="sidebar-nav">
 				                    <ul>
 				                        <li>
@@ -18,8 +18,9 @@
 				                </div>
 				            </div>
 				            <div class="widget-last widget text-image">
-				                <h3>Customer Support</h3>
-				                <div class="text-image" style="text-align:left"><img src="images/callus.gif" alt="Customer Support" /></div>
-				                <p>Nunc sit amet pretium purus. Pellet netus et malesuada fames ac turpis egestas.entesque habitant morbi tristique senectus </p>
+				                <h3>Контактная информация</h3>
+												<p> Location: Gomel, 115 Avenue street - Sovetskaya </p>
+												<p>График работы:понедельник - пятница - с 09:00 до 19:00  Суббота с 11:30 до 15:00,</p>
+                        <p>Выходные: Воскресенье (работаем по предварительной договоренности с туристами в воскресенье)</p>
 				            </div>
 				        

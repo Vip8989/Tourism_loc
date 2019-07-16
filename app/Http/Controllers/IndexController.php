@@ -108,7 +108,7 @@ class IndexController extends SiteController
 
         $sliders->transform(function($item,$key){
 
-            //изменение свойства img
+            //изменение свойства img  slider_path -хранится в config/settings.php
             $item->img = Config::get('settings.slider_path').'/'.$item->img;
             return $item;
 

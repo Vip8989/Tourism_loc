@@ -24,10 +24,12 @@
 
 				            
 				            <div class="widget-last widget text-image">
-				                <h3>Customer support</h3>
+				                <h3>Контактная информация</h3>
 				                <div class="text-image" style="text-align:left">
                         <img src="{{asset(env('THEME'))}}/images/callus.gif" alt="Customer support" /></div>
-				                <p>Proin porttitor dolor eu nibh lacinia at ultrices lorem venenatis. Sed volutpat scelerisque vulputate. </p>
+				                <p> Location: Gomel, 115 Avenue street - Sovetskaya </p>
+												<p>График работы:понедельник - пятница - с 09:00 до 19:00  Суббота с 11:30 до 15:00,</p>
+                        <p>Выходные: Воскресенье (работаем по предварительной договоренности с туристами в воскресенье)</p>
 				            </div>
 				            
 				        
